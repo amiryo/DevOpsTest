@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    node {
-      label 'Pipe1'
-    }
-    
-  }
+  agent none
   stages {
-    stage('ImportGIT') {
+    stage('ImportGit') {
       steps {
-        git(url: 'https://github.com/amiryo/DevOpsTest.git', branch: 'master', changelog: true, poll: true)
+        git 'https://github.com/amiryo/DevOpsTest.git'
       }
     }
   }
