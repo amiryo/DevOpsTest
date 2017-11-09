@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('ImportGit') {
       steps {
-        git 'https://github.com/amiryo/DevOpsTest.git'
+        git(url: 'https://github.com/amiryo/DevOpsTest.git', branch: 'master')
       }
     }
   }
