@@ -11,5 +11,10 @@ pipeline {
         sh 'cd /var/lib/jenkins/workspace/DevOpsTest/spring-boot-package-war;/usr/local/bin/apache-maven-3.5.0/bin/mvn package'
       }
     }
+    stage('stam') {
+      steps {
+        sh 'ls -ltr'
+      }
+    }
   }
 }
