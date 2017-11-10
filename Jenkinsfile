@@ -8,7 +8,7 @@ pipeline {
    } 
     stage('Build') {
       steps {
-        sh "cd /var/lib/jenkins/workspace/DevOpsTest;mvn package"
+        sh "cd /var/lib/jenkins/workspace/DevOpsTest;sudo mvn package"
       }
     }
   }
