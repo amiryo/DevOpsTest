@@ -8,12 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'cd /var/lib/jenkins/workspace/DevOpsTest/spring-boot-package-war'
-      }
-    }
-    stage('stam') {
-      steps {
-        sh 'ls -ltr'
+        sh 'cd /var/lib/jenkins/workspace/DevOpsTest/spring-boot-package-war;/usr/local/bin/apache-maven-3.5.0/bin/mvn package'
       }
     }
     stage('error') {
