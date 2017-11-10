@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'cd /var/lib/jenkins/workspace/DevOpsTest/spring-boot-package-war;/usr/local/bin/apache-maven-3.5.0/bin/mvn package'
+        sh 'cd /var/lib/jenkins/workspace/DevOpsTest/spring-boot-package-war'
       }
     }
     stage('stam') {
@@ -16,9 +16,9 @@ pipeline {
         sh 'ls -ltr'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        cleanWs(cleanWhenFailure: true)
+        cleanWs(cleanWhenFailure: true, cleanWhenNotBuilt: true)
       }
     }
   }
