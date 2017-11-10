@@ -7,9 +7,9 @@ pipeline {
     stage('CloneGit') {
       steps {
         sh "mvn package"
-         }
-       }
-     }
+          }
+        }
+      }
     }
   }
 }
