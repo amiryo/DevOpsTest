@@ -16,5 +16,10 @@ pipeline {
         sh 'ls -ltr'
       }
     }
+    stage('') {
+      steps {
+        cleanWs(cleanWhenFailure: true)
+      }
+    }
   }
 }
