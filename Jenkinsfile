@@ -4,7 +4,7 @@ pipeline {
     stage('CloneGit') {
       steps {
         git(url: 'https://github.com/amiryo/DevOpsTest.git', branch: 'master')
-    stage('CloneGit') {
+    stage('Build') {
       steps {
         sh"mvn package"
           }
@@ -13,4 +13,3 @@ pipeline {
     }
   }
 }
-
