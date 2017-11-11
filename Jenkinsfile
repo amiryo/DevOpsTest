@@ -14,7 +14,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'cd spring-boot-package-war;/usr/local/bin/apache-maven-3.5.0/bin/mvn test'
-        junit(healthScaleFactor: 1, testResults: '**/target/surefire-reports/*.xml')
+        junit(healthScaleFactor: 1, testResults: '**/target/surefire-reports/*.xml', keepLongStdio: true)
       }
     }
   }
